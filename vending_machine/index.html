@@ -9,118 +9,112 @@
   </head>
   <body>
     <h1 class="logo"><img src="./img/banner.svg" alt="cola Cola" /></h1>
-
-    <main class="machine_container">
+    <main>
       <!-- section 1 -->
-      <section>
+      <section class="section1">
         <h2 class="a11y_hidden">판매 음료</h2>
         <ul class="cola_list">
           <li>
-            <button type="button">
+            <button class="btn_cola" type="button">
               <img src="./img/coke-red.svg" alt="빨간색 캔의 오리지널 콜라" />
               <span class="cola_name">Original_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
           <li>
-            <button>
+            <button class="btn_cola" type="button">
               <img src="./img/coke-violet.svg" alt="보라색 캔의 콜라" />
               <span class="cola_name">Violet_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
           <li>
-            <button>
+            <button class="btn_cola" type="button">
               <img src="./img/coke-yellow.svg" alt="노란색 캔의 콜라" />
               <span class="cola_name">Yellow_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
           <li>
-            <button>
+            <button class="btn_cola" type="button">
               <img src="./img/coke-cool.svg" alt="하늘색 캔의 콜라" />
               <span class="cola_name">Cool_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
           <li>
-            <button>
+            <button class="btn_cola" type="button">
               <img src="./img/coke-green.svg" alt="초록색 캔의 콜라" />
               <span class="cola_name">Green_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
           <li>
-            <button>
+            <button class="btn_cola" type="button">
               <img src="./img/coke-orange.svg" alt="오렌지색 캔의 콜라" />
               <span class="cola_name">Orange_Cola</span>
               <strong class="cola_price">1000원</strong>
             </button>
           </li>
         </ul>
-
         <div class="machine_control">
           <div class="money_wrap">
             <span>잔액:</span>
             <strong>1,000원</strong>
           </div>
-          <button type="button">거스름돈 반환</button>
+          <button class="btn" type="button">거스름돈 반환</button>
           <label class="a11y_hidden">금액 투입(단위: 원)</label>
           <input min="1000" step="1000" type="number" placeholder="입금액 입력" />
-          <button type="button">입금</button>
+          <button class="btn" type="button">입금</button>
           <h2 class="a11y_hidden">장바구니</h2>
           <ul class="select_list">
             <li>
               <img src="./img/coke-red.svg" alt="빨간색 캔의 오리지널 콜라" />
-              <span>Original_Cola</span>
+              <span class="cola_name">Original_Cola</span>
               <strong class="number">1<span class="a11y_hidden">개</span></strong>
             </li>
             <li>
               <img src="./img/coke-green.svg" alt="초록색 캔의 콜라" />
-              <span>Green_Cola</span>
+              <span class="cola_name">Green_Cola</span>
               <strong class="number">2<span class="a11y_hidden">개</span></strong>
             </li>
           </ul>
-          <button type="button">획득</button>
+          <button class="btn" type="button">획득</button>
         </div>
       </section>
-
       <!-- section 2 -->
-      <section>
+      <section class="section2">
         <div class="money_wrap">
-          <span>소지금:</span>
+          <h2>소지금:</h2>
           <strong>25,000원</strong>
         </div>
-        <div>
       </section>
-
       <!-- section 3 -->
-      <section>
-          <h2>획득한 음료</h2>
-          <ul class="get_list">
-            <li>
-              <img src="img/coke-red.svg" alt="" />
-              <span>Original_Cola</span>
-              <strong class="number">1<span class="a11y_hidden">개</span></strong>
-            </li>
-            <li>
-              <img src="img/coke-green.svg" alt="" />
-              <span>Green_Cola</span>
-              <strong class="number">2<span class="a11y_hidden">개</span></strong>
-            </li>
-            <li>
-              <img src="img/coke-orange.svg" alt="" />
-              <span>Orange_Cola</span>
-              <strong class="number">1<span class="a11y_hidden">개</span></strong>
-            </li>
-            <li>
-              <img src="img/coke-violet.svg" alt="" />
-              <span>Violet_Cola</span>
-              <strong class="number">5<span class="a11y_hidden">개</span></strong>
-            </li>
-          </ul>
-          <span class="total_price">총금액: 9,000원</span>
-        </div>
+      <section class="section3">
+        <h2>획득한 음료</h2>
+        <ul class="get_list">
+          <li>
+            <img src="img/coke-red.svg" alt="" />
+            <span class="cola_name">Original_Cola</span>
+            <strong class="number">1<span class="a11y_hidden">개</span></strong>
+          </li>
+          <li>
+            <img src="img/coke-green.svg" alt="" />
+            <span class="cola_name">Green_Cola</span>
+            <strong class="number">2<span class="a11y_hidden">개</span></strong>
+          </li>
+          <li>
+            <img src="img/coke-orange.svg" alt="" />
+            <span class="cola_name">Orange_Cola</span>
+            <strong class="number">1<span class="a11y_hidden">개</span></strong>
+          </li>
+          <li>
+            <img src="img/coke-violet.svg" alt="" />
+            <span class="cola_name">Violet_Cola</span>
+            <strong class="number">5<span class="a11y_hidden">개</span></strong>
+          </li>
+        </ul>
+        <p class="total_price">총금액: 9,000원</p>
       </section>
     </main>
   </body>
