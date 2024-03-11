@@ -83,6 +83,9 @@ img {
 /* mobile - layout */
 .logo {
   text-align: center;
+}
+
+.logo > img {
   min-width: 36rem;
 }
 
@@ -243,10 +246,55 @@ main .section3 > h2 {
 }
 
 main .section3 .get_list {
-  height: 30.6rem;
+  height: 36.4rem;
 }
 
 main .section3 .total_price {
   text-align: right;
   line-height: 1.7rem;
+}
+
+@media (min-width: 36rem) {
+  /* pc - layout*/
+  body {
+    background-color: var(--second-color);
+  }
+
+  .logo {
+    margin-bottom: 6.7rem;
+  }
+
+  main {
+    width: 748px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem auto;
+    grid-template-areas:
+      "section1 section2"
+      "section1 section3";
+    gap: 2rem 2.8rem;
+  }
+
+  main .section1 {
+    grid-area: section1;
+  }
+
+  main .section2 {
+    grid-area: section2;
+  }
+
+  main .section3 {
+    grid-area: section3;
+  }
+
+  /* PC - section */
+  .logo > img {
+    width: 38.6rem;
+  }
+
+  main .section1,
+  main .section2,
+  main .section3 {
+    background-color: #fff;
+  }
 }
