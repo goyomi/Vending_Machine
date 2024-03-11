@@ -85,12 +85,12 @@ img {
   text-align: center;
 }
 
-.logo > img {
+.logo,
+main {
   min-width: 36rem;
 }
 
 main {
-  width: 36rem;
   margin: 0 auto;
 }
 
@@ -107,7 +107,7 @@ main .section1 .cola_list {
 
 main .section1 .machine_control {
   display: grid;
-  grid-template-columns: 20rem 9.4rem;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto auto;
   gap: 1.2rem;
 }
@@ -136,7 +136,7 @@ main .section3 .get_list {
 }
 
 /* mobile - section 1 */
-.logo img {
+.logo > img {
   width: 16.6rem;
 }
 
@@ -167,6 +167,7 @@ main .section2 .money_wrap {
 }
 
 main .section1 .machine_control .btn {
+  min-width: 9.4rem;
   padding: 0.6rem 0.9rem 0.7rem 1rem;
   box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -254,14 +255,19 @@ main .section3 .total_price {
   line-height: 1.7rem;
 }
 
-@media (min-width: 36rem) {
-  /* pc - layout*/
+/* tablet & PC */
+@media (min-width: 768px) {
+  /* layout */
   body {
     background-color: var(--second-color);
   }
 
   .logo {
     margin-bottom: 6.7rem;
+  }
+
+  .logo > img {
+    width: 27.6rem;
   }
 
   main {
@@ -287,7 +293,7 @@ main .section3 .total_price {
     grid-area: section3;
   }
 
-  /* PC - section */
+  /* section */
   .logo > img {
     width: 38.6rem;
   }
