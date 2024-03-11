@@ -34,6 +34,7 @@ button {
 h1,
 h2 {
   font-size: 100%;
+  font-weight: normal;
 }
 
 ul,
@@ -82,53 +83,51 @@ img {
 /* mobile - layout */
 .logo {
   text-align: center;
+  min-width: 36rem;
 }
 
-.machine_container {
-  padding: 1.8rem 2.7rem 4.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main {
+  width: 36rem;
+  margin: 0 auto;
 }
 
-.machine_container > section:first-child,
-.machine_container > section:nth-child(2),
-.machine_container > section:last-child {
-  width: 30.6rem;
+main .section1 {
+  padding: 3.1rem 2.7rem 2.8rem;
 }
 
-.machine_container > section:first-child > .cola_list {
+main .section1 .cola_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.machine_container > section:first-child > .machine_control {
+main .section1 .machine_control {
   display: grid;
   grid-template-columns: 20rem 9.4rem;
   grid-template-rows: auto auto auto;
   gap: 1.2rem;
 }
 
-.machine_container > section:nth-child(2) {
-  margin-top: 2rem;
-  margin-bottom: 4.1rem;
-}
-
-.machine_container > section:nth-child(2) .money_wrap {
+main .section1 .machine_control .money_wrap,
+main .section2 .money_wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.machine_container > section:nth-child(3) {
+main .section2 {
+  padding: 0.9rem 2.7rem;
+}
+
+main .section3 {
+  padding: 2.5rem 2.7rem 2.6rem;
   min-height: 36.4rem;
   display: flex;
   flex-direction: column;
 }
 
-.machine_container > section:nth-child(3) .get_list {
+main .section3 .get_list {
   margin-top: 1.3rem;
   margin-bottom: 0.6rem;
 }
@@ -138,7 +137,7 @@ img {
   width: 16.6rem;
 }
 
-.machine_container > section:first-child > .cola_list .btn_cola {
+main .section1 .cola_list .btn_cola {
   padding: 1.1rem 1rem 1.4rem 1.1rem;
   width: 100%;
   display: flex;
@@ -149,53 +148,55 @@ img {
   border-radius: 1rem;
 }
 
-.machine_container > section:first-child > .cola_list .btn_cola .cola_price {
+main .section1 .cola_list .btn_cola .cola_price {
   padding: 0.5rem 1.55rem;
   border-radius: 5rem;
   background-color: var(--main-color);
   color: var(--machine-btn-font-color);
 }
 
-.machine_container > section:first-child > .machine_control .money_wrap {
+main .section1 .machine_control .money_wrap,
+main .section2 .money_wrap {
   height: 3.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   background-color: var(--second-color);
 }
 
-.machine_container > section:first-child > .machine_control .btn {
+main .section1 .machine_control .btn {
   padding: 0.6rem 0.9rem 0.7rem 1rem;
   box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
 }
 
-.machine_container > section:first-child > .machine_control > input {
+main .section1 .machine_control > input {
   height: 3.2rem;
-  padding: 0.7rem 1rem 0.6rem 0;
+  padding: 0.7rem 0 0.6rem 1rem;
   border: 0.1rem solid var(--border-color);
   border-radius: 5px;
-  text-align: right;
+  text-align: left;
 }
 
-.machine_container > section:first-child > .machine_control > input::placeholder {
+main .section1 .machine_control input::placeholder {
   color: var(--border-color);
 }
 
-.machine_container > section:first-child > .machine_control .select_list {
-  padding: 1.2rem 1.8rem 1.2rem 1.2rem;
+main .section1 .machine_control .select_list {
   height: 10.6rem;
+}
+
+main .section1 .machine_control .select_list,
+main .section3 .get_list {
+  padding: 1.2rem 1.8rem 1.2rem 1.2rem;
   overflow-y: scroll;
   overflow-x: clip;
   background-color: var(--second-color);
   border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
-.machine_container > section:first-child > .machine_control .select_list > li {
-  min-width: 17rem;
+main .section1 .machine_control .select_list > li,
+main .section3 .get_list > li {
   padding: 0.6rem 0.8rem 0.7rem 1rem;
   margin-bottom: 0.6rem;
   display: flex;
@@ -203,84 +204,49 @@ img {
   gap: 1rem;
   background-color: #fff;
   border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
-.machine_container > section:first-child > .machine_control .select_list > li:last-child {
+main .section1 .machine_control .select_list > li:last-child,
+main .section3 .get_list > li:last-child {
   margin-bottom: 0;
 }
 
-.machine_container > section:first-child > .machine_control .select_list > li > img {
+main .section1 .machine_control .select_list > li > img,
+main .section3 .get_list > li > img {
   width: 1.8rem;
   height: 3.3rem;
 }
 
-.machine_container > section:first-child > .machine_control .select_list > li .number {
+main .section1 .machine_control .select_list > li .number,
+main .section3 .get_list > li .number {
   margin-left: auto;
   width: 3rem;
   height: 3rem;
   padding: 0.4rem 1.1rem 0.6rem;
   border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   text-align: center;
   line-height: 2rem;
 }
 
-.machine_container > section:first-child > .machine_control .select_list + button {
+main .section1 .machine_control .select_list + button {
   background-color: var(--main-color);
   color: var(--machine-btn-font-color);
 }
 
 /* mobile - section 2 */
-.machine_container > section:nth-child(2) .money_wrap {
-  padding: 0.6rem 1rem;
-  line-height: 2rem;
-  background-color: var(--second-color);
-  border-radius: 5px;
-}
 
 /* mobile - section 3 */
-.machine_container > section:nth-child(3) > h2 {
+main .section3 > h2 {
   text-align: center;
 }
 
-.machine_container > section:nth-child(3) .get_list {
-  flex-grow: 1;
-  padding: 1.2rem 1.8rem 1.2rem 1.2rem;
-  background-color: var(--second-color);
-  border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
-  overflow-y: scroll;
+main .section3 .get_list {
+  height: 30.6rem;
 }
 
-.machine_container > section:nth-child(3) .get_list > li {
-  padding: 0.6rem 0.8rem 0.7rem 1rem;
-  margin-bottom: 0.6rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: #fff;
-  border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
-}
-
-.machine_container > section:nth-child(3) .get_list > li > img {
-  width: 1.8rem;
-  height: 3.3rem;
-}
-
-.machine_container > section:nth-child(3) .get_list > li .number {
-  margin-left: auto;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.4rem 1.1rem 0.6rem;
-  border: 0.1rem solid var(--border-color);
-  border-radius: 5px;
-  text-align: center;
-  line-height: 2rem;
-}
-
-.machine_container > section:nth-child(3) .total_price {
+main .section3 .total_price {
   text-align: right;
   line-height: 1.7rem;
 }
